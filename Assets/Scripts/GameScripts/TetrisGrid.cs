@@ -47,12 +47,12 @@ namespace GameScene {
             * Implementirati traženje najniže dostune lokacije u mreži 
             * do koje se tetromino smije spustiti.
             */
-            for (int y_min = y; y_min >= 0; y_min--) {
+            for (int y_min = y - 1; y_min >= 0; y_min--) {
                 if (!CheckIfFieldEmpty(y_min, x)) {
                     return y_min + 1;
                 }
             }
-            return y + 1;
+            return 0;
         }
 
         public void CheckForCompleteLines() {
